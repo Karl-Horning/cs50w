@@ -21,11 +21,3 @@ INSERT INTO passengers (name, flight_id) VALUES ('Dave', 2);
 INSERT INTO passengers (name, flight_id) VALUES ('Erin', 4);
 INSERT INTO passengers (name, flight_id) VALUES ('Frank', 6);
 INSERT INTO passengers (name, flight_id) VALUES ('Grace', 6);
-
--- UPDATED FLIGHTS TABLE DATA
-INSERT INTO flights (origin_id, destination_id, duration) VALUES (1, 4, 415);
-INSERT INTO flights (origin_id, destination_id, duration) VALUES (2, 7, 760);
-INSERT INTO flights (origin_id, destination_id, duration) VALUES (3, 8, 700);
-INSERT INTO flights (origin_id, destination_id, duration) VALUES (1, 7, 435);
-INSERT INTO flights (origin_id, destination_id, duration) VALUES (5, 7, 245);
-INSERT INTO flights (origin_id, destination_id, duration) VALUES (6, 1, 455);

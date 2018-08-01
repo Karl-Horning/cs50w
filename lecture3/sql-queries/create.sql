@@ -16,11 +16,3 @@ CREATE TABLE passengers (
     name VARCHAR NOT NULL,
     flight_id INTEGER REFERENCES flights
 );
-
--- UPDATED FLIGHTS TABLE
-CREATE TABLE flights (
-    id SERIAL PRIMARY KEY,
-    origin_id INTEGER REFERENCES locations,
-    destination_id INTEGER REFERENCES locations,
-    duration INTEGER NOT NULL
-);
