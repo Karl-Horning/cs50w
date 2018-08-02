@@ -1,5 +1,5 @@
-# CS50W 2018
-## A place to store the exercises and examples for CS50W 
+# CS50W 2018 #
+## A place to store the exercises and examples for CS50W ##
 The CS50W course page is available at [https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/course/](https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/course/)
 
 The lecture folders contain the following content:
