@@ -2,7 +2,7 @@
 ## A place to store the exercises and examples for CS50W ##
 The CS50W course page is available at [https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/course/](https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/course/)
 
-The lecture folders contain the following content:
+The lecture folders contain the following topics:
 
 Lecture 00: Git  
 Lecture 01: HTML, CSS  
