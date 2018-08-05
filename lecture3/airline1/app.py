@@ -1,5 +1,3 @@
-# RUN IN TERMINAL: export DATABASE_URL="postgres://karl_horning:cs50w@localhost/lecture3"
-# OR, IN PLACE OF ENGINE, USE engine = create_engine('postgres://karl_horning:cs50w@localhost/lecture3')
 import os
 
 from flask import Flask, render_template, request
