@@ -1,4 +1,6 @@
-from flask import Flask, render_template, request
+# RUN IN TERMINAL: export DATABASE_URL="postgres://karl_horning:cs50w@localhost/lecture3"
+# OR, IN PLACE OF ENGINE, USE engine = create_engine('postgres://karl_horning:cs50w@localhost/lecture3')
+from flask import Flask, render_template, jsonify, request
 from models import *
 
 app = Flask(__name__)
@@ -49,3 +51,24 @@ def flight(flight_id):
     # Get all passengers
     passengers = flight.passengers
     return render_template('flight.html', flight=flight, passengers=passengers)
+
+@app.route('/api/flights/<int:flight_id>')
+def flight_api(flight_id):
+    """Return details about a single flight."""
+
+    # Make sure the flight exists
+    flight = Flight.query.get(flight_id)
+    if flight is None:
+        return jsonify({'error': 'Invalid flight_id'}), 422
+
+    # Get all passengers
+    passengers = flight.passengers
+    names = []
+    for passenger in passengers:
+        names.append(passenger.name)
+    return jsonify({
+        'origin': flight.origin,
+        'destination': flight.destination,
+        'duration': flight.duration,
+        'passengers': names
+    })
