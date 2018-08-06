@@ -7,6 +7,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script>
             document.addEventListener('DOMContentLoaded', () => {
+                // Submit button is disabled by default
+                document.querySelector('#submit').disabled = true;
+
+                // Enable button only if there is text in the input field
+                document.querySelector('#task').onkeyup = () => {
+                    if(document.querySelector('#task').value.length > 0) {
+                        document.querySelector('#submit').disabled = false;
+                    } else {
+                        document.querySelector('#submit').disabled = true;
+                    };
+                };
+
                 document.querySelector('#new-task').onsubmit = () => {
                     // Create new item for the list
                     const li = document.createElement('li');
@@ -15,8 +27,9 @@
                     // Add new item to list
                     document.querySelector('#tasks').append(li);
 
-                    // Clear input field
+                    // Clear input field and disable button again
                     document.querySelector('#task').value = '';
+                    document.querySelector('#submit').disabled = true;
 
                     // Stop form from submitting
                     return false;
@@ -29,7 +42,7 @@
         <ul id="tasks"></ul>
         <form id="new-task">
             <input id="task" autocomplete="off" autofocus placeholder="New Task" type="text">
-            <input type="submit" value="Add New Task">
+            <input id="submit" type="submit" value="Add New Task">
         </form>
     </body>
 </html>
