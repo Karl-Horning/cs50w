@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>My Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    </head>
+    <body>
+        <button id="roll">Roll</button>
+        <ul id="rolls"></ul>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+        <script id="result" type="text/x-handlebars-template">
+            <li>
+                You rolled:
+                <img alt="{{ value }}" title="{{ value }}" src="img/{{ value }}.png"></img>
+            </li>
+        </script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
